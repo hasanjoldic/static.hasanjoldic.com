@@ -14,7 +14,7 @@ jobs:
           command: | 
             if cd /root/apps/static.hasanjoldic.com; then git pull; 
             else git clone git@github.com:hasanjoldic/static.hasanjoldic.com.git /root/apps/static.hasanjoldic.com; fi
-            cd /root/apps/static.hasanjoldic.com && docker-compose -f docker/docker-compose.yml -f docker/docker-compose.prod.yml up --build --detach
+            cd /root/apps/static.hasanjoldic.com && docker-compose up --detach
           host: static.hasanjoldic.com
           username: root
           privateKey: ${{ secrets.HASAN_JOLDIC_COM_PRIVATE_KEY }}
