@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  proxy:
+    image: nginx
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates
+    ports:
+      - 3010:80
+    restart: always
